@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+.header {
+  height: 5vh;
+  background-color: aqua;
+}
+
+.main-area-container {
+  display: flex;
+}
+
+.main-area-container .left-section {
+  background-color: red;
+  flex-grow: 2;
+}
+.main-area-container .right-section {
+  background-color: blue;
+  flex-grow: 5;
+}
+.left-section > div,
+.right-section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  height: 40vh;
+  background-color: #ede7f6;
+}
+
+.sidebar {
+  height: 50vh;
+  background-color: #c8e6c9;
+}
+
+.main-content {
+  height: 70vh;
+  background-color: #ffe082;
+}
+
+.extra-content {
+  height: 20vh;
+  background-color: #c5cae9;
+}
+
+.related-container {
+  display: flex;
+}
+.related-container :first-child {
+  flex-grow: 3;
+  background-color: #00897b;
+}
+.related-container :last-child {
+  flex-grow: 1;
+  background-color: #9575cd;
+}
+.related-container > div {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer {
+  background-color: orange;
+  height: 5vh;
+}
