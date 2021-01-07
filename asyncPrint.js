@@ -1,7 +1,11 @@
-function printAsync(arr) {
-    arr.forEach((item, i) => {
-        setTimeout(()=> console.log(item, Math.pow(2,i)), 1000 * Math.pow(2,i))
+function printNumber(num, time) {
+    return new Promise((res, rej) => {
+        setTimeout(()=> console.log(num, time), 1000 * time )
     })
-    return ''
 }
-console.log(printAsync(['a','b','c','d']))
+function printAsync(arr) {
+    arr.forEach(async (item, i) => {
+        await printNumber(item, Math.pow(2,i))
+    })
+}
+console.log(printAsync(['a','b','c','d']));
